@@ -1,0 +1,10 @@
+project: savantenvs/htslib
+target: fuzz_expr
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_expr/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_expr
+    libfuzzer: true
+    timeout: 30
+    dictionary: /mayhem/test/fuzz/corpus.expr.dict
