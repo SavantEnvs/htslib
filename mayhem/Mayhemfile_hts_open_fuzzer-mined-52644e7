@@ -1,0 +1,9 @@
+project: savantenvs/htslib
+target: hts_open_fuzzer-mined-52644e7
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/hts_open_fuzzer-mined-52644e7/testsuite
+cmds:
+  - cmd: /mayhem/hts_open_fuzzer
+    libfuzzer: true
+    timeout: 30
